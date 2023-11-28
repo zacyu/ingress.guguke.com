@@ -1,0 +1,167 @@
+@font-face {
+  font-family: Exos;
+  src: url(exos.ttf);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background: rgb(26, 111, 73);
+  background: radial-gradient(circle, #1a6f49 0%, #212d27 100%);
+}
+
+@media (max-width:700px) {
+  body {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width:550px) {
+  body {
+    transform: scale(0.58);
+  }
+}
+
+@media (max-width:380px) {
+  body {
+    transform: scale(0.5);
+  }
+}
+
+#card {
+  font-family: 'Exo', sans-serif;
+  font-size: 18px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 630px;
+  height: 880px;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, .4));
+}
+
+#card a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#card .content {
+  height: 100%;
+  width: 100%;
+  background: url(pattern.svg) -30px, repeating-linear-gradient(45deg, #543270 0, #342e70 200px, #543270 400px);
+  clip-path: polygon(0 0, calc(100% - 100px) 0, 100% 100px, 100% 100%, 0 100%);
+}
+
+#ingress-logo {
+  position: absolute;
+  left: 40px;
+  top: 60px;
+  width: 160px;
+}
+
+#header {
+  position: absolute;
+  left: 240px;
+  top: 50px;
+  width: 360px;
+}
+
+#header .welcome {
+  font-size: 36px;
+  margin: 12px 0;
+}
+
+#card main {
+  position: fixed;
+  top: 210px;
+  width: 100%;
+}
+
+#card .block {
+  margin: 20px 30px;
+  border-radius: 4px;
+  overflow: hidden;
+  width: calc(100% - 60px);
+}
+
+#card .block h2,
+#card .block p {
+  margin: 0;
+  background: rgba(255, 255, 255, .05);
+  padding: 8px 12px;
+}
+
+#card .block h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+#card .block.passcode h2 {
+  background: #fff;
+  color: #000;
+  text-align: center;
+}
+
+#card .block p {
+  margin-top: 2px;
+}
+
+#card .block .list {
+  max-height: 100px;
+  overflow-y: scroll;
+  scrollbar-width: auto; 
+}
+
+#card .block .list::-webkit-scrollbar {
+  width: 10px;
+}
+
+#card .block .list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, .2);
+  border-radius: 10px;
+}
+
+#card .block .list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, .5);
+  border-radius: 10px;
+}
+
+#social p {
+  text-align: center;
+}
+
+#social .icon {
+  display: inline-block;
+  margin: 6px 16px;
+  padding-top: 6px;
+  text-align: center;
+  width: 90px;
+}
+
+#social .icon:before {
+  content: '';
+  display: block;
+  top: -5px;
+  left: 15px;
+  width: 60px;
+  height: 60px;
+  background: url(play.svg) no-repeat;
+  position: relative;
+}
+
+#social .telegram:before {
+  background-image: url(telegram.svg);
+}
+
+#social .instagram:before {
+  background-image: url(instagram.svg);
+}
+
+#social .mastoden:before {
+  background-image: url(mastodon.svg);
+}
