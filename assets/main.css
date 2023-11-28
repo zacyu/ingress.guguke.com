@@ -116,15 +116,14 @@ body {
 #card .block .list .label {
   display: inline-block;
   width: 100px;
-  margin-right: 8px;
-  padding: 2px 0;
+  margin-right: 2px;
   border-radius: 4px;
   background: #fff;
   color: #543270;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 800;
   text-align: center;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 #social p {
