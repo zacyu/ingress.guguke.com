@@ -83,11 +83,6 @@ body {
   font-weight: 600;
 }
 
-#card .block:last-child {
-  padding-bottom: 30px;
-  margin-bottom: 0;
-}
-
 #card .block.passcode h2 {
   background: #fff;
   color: #000;
@@ -177,8 +172,8 @@ body {
   }
 
   #card .content {
-    height: auto;
     text-align: center;
+    padding-bottom: 10px;
   }
 
   #ingress-logo {
@@ -197,8 +192,13 @@ body {
     margin: 0 30px;
   }
 
+  #card header p {
+    text-align: left;
+  }
+
   #card main {
     position: relative;
     top: auto;
+    text-align: left;
   }
 }
