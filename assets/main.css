@@ -113,6 +113,20 @@ body {
   border-radius: 10px;
 }
 
+#card .block .list .label {
+  display: inline-block;
+  width: 100px;
+  margin-right: 8px;
+  padding: 2px 0;
+  border-radius: 4px;
+  background: #fff;
+  color: #543270;
+  font-size: 14px;
+  font-weight: 800;
+  text-align: center;
+  vertical-align: top;
+}
+
 #social p {
   text-align: center;
 }
@@ -200,5 +214,10 @@ body {
     position: relative;
     top: auto;
     text-align: left;
+  }
+
+  #card .block .list {
+    max-height: none;
+    overflow-y: auto;
   }
 }
