@@ -1,8 +1,3 @@
-@font-face {
-  font-family: Exos;
-  src: url(exos.ttf);
-}
-
 html {
   height: 100%;
 }
@@ -41,9 +36,44 @@ body {
 
 #ingress-logo {
   position: absolute;
-  left: 40px;
-  top: 60px;
+  left: -200px;
+  top: 10px;
   width: 160px;
+  height: 138px;
+  background: url(ingress-logo.svg) no-repeat;
+}
+
+@keyframes enter-exit-zoom {
+
+  0%,
+  100% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  5%,
+  60% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0;
+  }
+}
+
+
+#ingress-logo .badge {
+  position: relative;
+  left: 30px;
+  top: 2px;
+  width: 100px;
+  height: 100px;
+  background: url(badge.png) no-repeat;
+  background-size: contain;
+  transform: scale(0.8);
+  opacity: 0;
+  animation: enter-exit-zoom 10s ease infinite;
 }
 
 #card header {
@@ -165,7 +195,6 @@ body {
   body {
     transform: scale(0.8);
   }
-
 }
 
 @media (max-width: 650px),
@@ -191,10 +220,10 @@ body {
 
   #ingress-logo {
     position: relative;
-    text-align: center;
-    left: initial;
-    top: initial;
-    margin-top: 40px;
+    left: 50%;
+    top: 120px;
+    margin-bottom: 220px;
+    transform: translateX(-50%) scale(2);
   }
 
   #card header {
