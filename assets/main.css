@@ -46,16 +46,17 @@ body {
 
 #fold-toggle .icon {
   display: inline-block;
-  padding: 15px 15px 35px 35px;
+  padding: 0 0 40px 40px;
   text-align: center;
 }
 
 #fold-toggle .icon:before {
   content: '';
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   background: url(arrow_down.svg) no-repeat;
+  background-size: cover;
   position: relative;
   transition: all 0.5s ease-in-out;
 }
@@ -259,10 +260,13 @@ body {
     transform: initial;
   }
 
+  #card.fold {
+    margin-top: 0 !important;
+  }
+
   #fold-toggle {
     top: 20px;
     right: 20px;
-    pointer-events: none;
   }
 
   #card .content {
