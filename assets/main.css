@@ -5,8 +5,9 @@ html {
 body {
   margin: 0;
   min-height: 100%;
-  background: rgb(26, 111, 73);
-  background: radial-gradient(circle, #1a6f49 0%, #212d27 100%);
+  background: url(background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
 }
 
 #card {
@@ -21,6 +22,39 @@ body {
   color: #fff;
   transform: translate(-50%, -50%);
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, .4));
+  transition: all 0.5s ease-in-out;
+}
+
+#card.fold {
+  margin-top: 50vh;
+  height: 220px;
+  overflow: hidden;
+}
+
+#fold-toggle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+#fold-toggle .icon {
+  display: inline-block;
+  padding: 35px 35px 15px 15px;
+  text-align: center;
+}
+
+#fold-toggle .icon:before {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: url(arrow_down.svg) no-repeat;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  transform: rotate(180deg);
 }
 
 #card a {
@@ -198,12 +232,17 @@ body {
   body {
     transform: scale(0.8);
   }
+
+  #card.fold {
+    margin-top: 62.5vh;
+  }
 }
 
 @media (max-width: 650px),
 (max-height: 750px) {
   body {
     transform: initial;
+    overflow-y: scroll;
   }
 
   #card {
@@ -211,9 +250,19 @@ body {
     top: auto;
     left: auto;
     width: calc(100% - 40px);
-    height: auto;
+    margin-top: calc(100vh - 150px) !important;
+    height: auto !important;
     padding: 20px;
     transform: initial;
+  }
+
+  #fold-toggle {
+    top: 20px;
+    right: 20px;
+  }
+
+  #fold-toggle .icon:before {
+    transform: rotate(0deg);
   }
 
   #card .content {
