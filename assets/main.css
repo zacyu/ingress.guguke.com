@@ -40,6 +40,10 @@ body {
   cursor: pointer;
 }
 
+#card.fold #fold-toggle .icon:before {
+  transform: rotate(180deg);
+}
+
 #fold-toggle .icon {
   display: inline-block;
   padding: 35px 35px 15px 15px;
@@ -54,7 +58,6 @@ body {
   background: url(arrow_down.svg) no-repeat;
   position: relative;
   transition: all 0.5s ease-in-out;
-  transform: rotate(180deg);
 }
 
 #card a {
@@ -259,10 +262,7 @@ body {
   #fold-toggle {
     top: 20px;
     right: 20px;
-  }
-
-  #fold-toggle .icon:before {
-    transform: rotate(0deg);
+    pointer-events: none;
   }
 
   #card .content {
