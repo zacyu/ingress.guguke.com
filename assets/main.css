@@ -247,6 +247,7 @@ body {
   body {
     transform: initial;
     overflow-y: scroll;
+    overscroll-behavior-y: contain;  
   }
 
   #card {
