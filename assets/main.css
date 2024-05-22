@@ -22,13 +22,11 @@ body {
   color: #fff;
   transform: translate(-50%, -50%);
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, .4));
-  transition: all 0.5s ease-in-out;
+  transition: margin-top 0.5s ease-in-out;
 }
 
 #card.fold {
-  margin-top: 50vh;
-  height: 220px;
-  overflow: hidden;
+  margin-top: calc(50vh + 220px);
 }
 
 #fold-toggle {
@@ -238,7 +236,7 @@ body {
   }
 
   #card.fold {
-    margin-top: 62.5vh;
+    margin-top: calc(62.5vh + 220px);
   }
 }
 
